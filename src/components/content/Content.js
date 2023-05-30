@@ -10,7 +10,9 @@ const Content = () => {
         const resp = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${APIKEY}`);
         const data = await resp.json();
         console.log(data);
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     });
   }, []);
   return (
